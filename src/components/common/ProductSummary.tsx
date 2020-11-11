@@ -10,12 +10,13 @@ type Props = {
 }
 
 const ProductSummary: FC<Props> = ({
-  product: { name, price, imgSrc, description },
+  product: { name, price, imgSrc, description, id },
   onClick,
 }) => {
   return (
     <div
       className="shadow-1 br3 flex pa3 bg-white pointer"
+      id={`summary-${id}`}
       onClick={() => onClick?.()}
       onKeyPress={() => onClick?.()}
       role="button"
